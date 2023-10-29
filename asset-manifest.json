@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/desktop-selling-site/static/css/main.073c9b0a.css",
+    "main.js": "/desktop-selling-site/static/js/main.d7c90e9d.js",
+    "static/js/787.7614e3c9.chunk.js": "/desktop-selling-site/static/js/787.7614e3c9.chunk.js",
+    "static/media/logo.svg": "/desktop-selling-site/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/desktop-selling-site/index.html",
+    "main.073c9b0a.css.map": "/desktop-selling-site/static/css/main.073c9b0a.css.map",
+    "main.d7c90e9d.js.map": "/desktop-selling-site/static/js/main.d7c90e9d.js.map",
+    "787.7614e3c9.chunk.js.map": "/desktop-selling-site/static/js/787.7614e3c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.d7c90e9d.js"
+  ]
+}
