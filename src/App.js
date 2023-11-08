@@ -1,37 +1,14 @@
 import React, { useState, useRef } from "react";
 import "./App.css";
-
 import { Auth } from "./components/auth";
 import { Chat } from "./components/chat";
-
 import Cookies from "universal-cookie";
-
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
-
 const cookies = new Cookies();
-
-// import NavBar from "./components/navBar/navBar";
-
-// services image parallax effect
-
-// import TextBox from "./components/banner/textBox";
-// import TextBox1 from "./components/banner/textBox1";
-// import Services0 from "./components/banner/services0";
-// import Services1 from "./components/banner/services1";
-
-// contact - form;
-
-// import Contact from "./components/contact/contact";
-
-// services text parallax effect
-
-// const textBox = TextBox();
-
 function App() {
   const [isAuth, setIsAuth] = useState(cookies.get("auth-token"));
   const [room, setRoom] = useState(null);
-
   const roomInputRef = useRef(null);
   const signUserOut = async () => {
     await signOut(auth);
@@ -39,7 +16,6 @@ function App() {
     setIsAuth(false);
     setRoom(null);
   };
-
   if (!isAuth) {
     return (
       <div>
@@ -68,5 +44,4 @@ function App() {
     </>
   );
 }
-
 export default App;

@@ -17,6 +17,7 @@ export const Auth = (props) => {
       console.log(err);
     }
   };
+
   return (
     <div className="auth">
       <p>Sign In With Google To Continue</p>
