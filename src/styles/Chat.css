@@ -3,14 +3,14 @@
   flex-direction: column;
   align-items: center;
   font-family: sans-serif;
-  width: 90%;
+  width: 50%;
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
-  border: 2px solid #3b5998;
+  border: 2px solid #333;
 }
 .header {
-  background-color: #3b5998;
+  background-color: #333;
   color: white;
   width: 100%;
   text-align: center;
@@ -34,8 +34,12 @@
 
 .user {
   font-weight: bold;
-  margin-right: 10px;
-  color: #333;
+  color: white;
+  font-size: 12px;
+  background-color: #00102a;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
 }
 
 .new-message-form {
@@ -58,8 +62,16 @@
 .send-button {
   border: none;
   outline: none;
-  background: #3b5998;
+  background: #333;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
+}
+.user-message {
+  display: block;
+  color: white;
+  padding: 0px 5px 2px;
+  background-color: #333;
+  border-radius: 5px;
+  line-height: 25px;
 }

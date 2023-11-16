@@ -31,7 +31,7 @@ function App() {
         <Chat room={room} />
       ) : (
         <div className="room">
-          <label htmlFor="">Enter Room Name:</label>
+          <label htmlFor="">Enter Your Email:</label>
           <input type="text" ref={roomInputRef} />
           <button onClick={() => setRoom(roomInputRef.current.value)}>
             Enter Chat
