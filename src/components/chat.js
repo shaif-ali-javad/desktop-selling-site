@@ -8,6 +8,7 @@ import {
   where,
   serverTimestamp,
   orderBy,
+  getDocs,
 } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 
@@ -15,6 +16,7 @@ export const Chat = (props) => {
   const { room } = props;
   const [newMessage, setNewMessage] = useState();
   const [messages, setMessage] = useState([]);
+  // const [products, setProducts] = useState();
 
   const messagesRef = collection(db, "messages");
   useEffect(() => {
@@ -43,7 +45,19 @@ export const Chat = (props) => {
     });
     setNewMessage("");
   };
-
+  useEffect(() => {
+    (async () => {
+      const colRef = collection(db, "messages");
+      const snapshots = await getDocs(colRef);
+      const docs = snapshots.docs.map((doc) => {
+        const data = doc.data();
+        data.id = doc.id;
+        return data;
+      });
+      setMessage(docs);
+      console.log(docs);
+    })();
+  }, []);
   return (
     <div className="chat-app">
       <div className="header">
@@ -56,6 +70,8 @@ export const Chat = (props) => {
               <span className="user"> {message.user}</span>
               <br />
               {message.text}
+              {/* <br />
+              {message} */}
             </div>
           </div>
         ))}
@@ -72,6 +88,17 @@ export const Chat = (props) => {
           Send
         </button>
       </form>
+      {/* <div className="messages">
+        {messages.map((message) => (
+          <div className="messages" key={message.user}>
+            <div className="user-message">
+              <span className="user"> {message.user}</span>
+              <br />
+              {message.text}
+            </div>
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 };
